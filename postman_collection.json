@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "6edfe9b0-48e0-4ead-a265-e57ad520296e",
+		"name": "Calashock",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4371660"
+	},
+	"item": [
+		{
+			"name": "Get All Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/categories",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products - All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/products",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/products/1",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products by Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/products/categories/{{category}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"products",
+						"categories",
+						"{{category}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
