@@ -12,6 +12,7 @@ import {
     Rating, AspectRatio,
 } from "@mantine/core"
 import { IconGasStation, IconGauge, IconManualGearbox, IconUsers } from "@tabler/icons"
+import { useRouter } from "next/router"
 import { Product } from "requests/request"
 
 const useStyles = createStyles((theme) => ({
@@ -74,6 +75,8 @@ const ProductCard = ({
 
     const {classes} = useStyles()
 
+    const router = useRouter()
+
     return (
         <Card withBorder radius="md" className={classes.card}>
             <AspectRatio ratio={16 / 9}>
@@ -126,7 +129,7 @@ const ProductCard = ({
                         </Text>
                     </div>
 
-                    <Button radius="xl" style={{flex: 1}}>
+                    <Button onClick={()=> router.push(`/product/${id}`)} radius="xl" style={{flex: 1}}>
                         Closer look
                     </Button>
                 </Group>
